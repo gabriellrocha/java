@@ -16,5 +16,11 @@ Comentários - Uma explicação textual do que o código faz e são ignorados pe
 
 Expressão - É uma construção que pode ser avaliada como um valor, esse valor pode ser usado em cálculos posteriores ou
 atribuído a uma variável
+    É uma combinação de operadores e operandos usados para realizar operações matemáticas
 
 
+
+Tipos referência - É um tipo que armazena uma referência a um objeto localizado em outro lugar na memória(Heap)
+    == Compara as referências (endereço de memória) ao invés dos valores reais
+    Atribuir um valor de uma variável de referência a outra cria uma cópia da referência, em vez do valor em si
+    Podem se referir a um valor especial(null) que representa que ainda não foi inicializado ou não tem um valor
