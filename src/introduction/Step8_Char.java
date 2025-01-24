@@ -1,4 +1,4 @@
-package introducao;
+package introduction;
 
 public class Step8_Char {
 
