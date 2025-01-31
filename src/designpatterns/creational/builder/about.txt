@@ -1,0 +1,16 @@
+O padrão Builder é utilizado para criar objetos complexos (muitas propriedades), oferendo
+um processo de construção flexível e legível(passa a passo)
+
+Características:
+  - Construtor privado para o objeto principal. Construtor público no Builder
+  - Métodos "setter" no builder para definir cada uma das propriedades
+  - Cada métoodo retorna o próprio Builder(this) - Fluent Interface (permite chamadas encadeadas)
+  - Métoodo build() que retorna a instância do objeto finalizado
+
+Observações:
+  - O padrão Builder não exige imutabilidade, porém é uma prática comum e recomendada, pois torna
+  o objeto mais seguro e previsível
+
+  - Os nomes para os métodos devem ser descritivos, geralmente sem o prefixo 'set' diferente de objetos POJO
+
+  - Pode conter regras de negócio que tornam obrigatória a inicialização de certos campos
