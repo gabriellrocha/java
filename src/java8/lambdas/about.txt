@@ -1,0 +1,27 @@
+# Interface Funcional
+
+Interface funcional é uma interface que segue o padrão SAM (Single Abstract Method). Isso significa que
+esta interface pode conter APENAS um único método abstrato, mas, pode conter outros métodos que sejam
+static ou default. Características:
+
+- Um único método abstrado - comportamento que será implementado
+- Annotation @FunctionalInterface - opcional, mas recomendado. Impede que mais métodos abstratos
+estejam presentes
+- Pode conter métodos concretos (default - static)
+
+
+
+# Lambdas
+
+São funções anônimas (sem nome) usadas para simplificar a implementação de interfaces funcionais. Antes do Java8,
+interfaces funcionais precisavam ser implementadas usando classes anônimas, era a principal maneira
+de passar comportamentos como parâmetros. São criadas para serem utilizadas num ponto específico,
+geralmente onde uma implementação rápida e temporária de um interface funcional é necessária.
+
+Outro benefício é o reuso da função, pois são funções específicas que contém uma única responsabilidade
+
+
+
+#Classes anônimas
+
+

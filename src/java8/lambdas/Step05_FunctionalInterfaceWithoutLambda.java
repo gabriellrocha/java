@@ -8,12 +8,6 @@ public class Step05_FunctionalInterfaceWithoutLambda {
 
         // Exemplos antes do Java 8
 
-
-        /* Uma das utilidades de classes anônimas é criar implementações pequenas de interfaces
-         sem a necessidade de declarar uma classe separada. Com a chegada das expressões lambdas,
-         esta utilidade caiu em desuso.
-        * */
-
         // Métoodo 1
         // Esta sintaxe cria uma classe anônima que implementa Predicate<Integer>
 
@@ -25,13 +19,13 @@ public class Step05_FunctionalInterfaceWithoutLambda {
             }
         };
 
-        System.out.println(isEven.test(10));
 
         System.out.println("Object: " + isEven);
         System.out.println("Anonymous class: " + isEven.getClass());
 
 
         // Métoodo 2
+        // Utilizando uma classe separada
 
         Predicate<Integer> idEven = new PredicateTest();
 

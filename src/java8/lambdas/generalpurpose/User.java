@@ -1,7 +1,5 @@
 package java8.lambdas.generalpurpose;
 
-import java.util.Comparator;
-
 public class User {
 
     private final String name;

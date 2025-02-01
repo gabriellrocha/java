@@ -2,15 +2,12 @@ package java8.lambdas;
 
 public class Step01_Lambdas {
 
-    /* Lambda expression em Java são funções anônimas usadas para simplificar
-     a implementação de interfaces funcionais */
-
     // (parâmetros) -> expressão
 
 
     public static void main(String[] args) {
 
-        // Utilizando implementação de interface funcional sem Lambda
+        // Implementação de interface funcional sem Lambda - Utilizando classe separada
 
         Calculo somar = new Somar();
         System.out.println(somar.executar(5, 5));
@@ -25,6 +22,7 @@ public class Step01_Lambdas {
             return a + b;
         };
         soma.executar(6, 9);
+
 
         // Lambda com apenas uma expressão é permitido omitir o par de {} e o return
         Calculo multi = (n1, n2) -> n1 * n2;

@@ -4,3 +4,4 @@ out/
 !**/src/test/**/out/
 .idea/
 hyperskill-java.iml
+IdeaProjects.iml
