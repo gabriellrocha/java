@@ -1,0 +1,49 @@
+# Streams
+
+Stream, IntStream, LongStream, DoubleStream são 'fluxos' sobre objetos e tipos primitivos int, long, double
+
+O principal objetivo da API de Stream é permitir a manipulação de coleções de forma declarativa e
+funcional, focando na clareza, legibilidade e paralelismo das operações, eliminando a necessidade
+de loops imperativos
+
+
+Streams diferem das coleções de várias maneiras:
+
+    - Sem armazenamento. Um fluxo NÃO É uma estrutura de dados que armazena elementos; em vez disso ele transmite
+    elementos de uma fonte como uma estrutura de dados, um array, uma função geradora, um canal E/S, por meio de um
+    pipeline de operações computacionais.
+
+    - Uma operação em uma stream produz um resultado, mas não modifica a sua origem. Por exemplo,
+     filtrar um Stream obtido de uma coleção produz um novo Stream sem os elementos filtrados,
+     em vez de remover elementos da coleção de origem.
+
+    - As operações de Stream são divididas em operações intermediarias (produtoras de stream) e operações
+    terminais (produtoras de valor ou efeito colateral). Operações intermediarias são sempre preguiçosas (Lazy - Só são
+    executadas quando uma operação terminal é chamada)
+
+
+Streams podem ser obtidos de várias maneiras. Alguns exemplos incluem:
+
+    - De uma Collection por meio dos métodos stream() e parallelStream()
+    - De um array via Arrays.stream(Object[])
+    - Métodos estáticos de fábrica nas classes de stream, como Stream.of(), IntStream.range() etc.
+
+
+# Stream Operations and Pipeline
+
+Um pipeline de stream consiste numa fonte (como uma Collection); seguido por ZERO ou MAIS
+operações intermediárias e, UMA operação terminal.
+
+
+Short-circuit - significa 'parar a execução do stream assim que o resultado for determinado', sem
+processar os elementos restantes. Isto serve para otimizar o desempenho evitando iterações desnecessárias.
+
+
+# Parallelism
+
+Todas as operações de stream podem ser executadas sequencialmente ou em pararelo. As implementações de Stream
+no JDK criam streams sequenciais, a menos que o paralelismo seja solicitado explicitamente
+
+A maioria das operações de stream aceitam parâmetros que descrevem o comportamento específicado pelo utilizador, que
+geralmente são expressões lambdas. Esses parâmetros são sempre instâncias de uma interface funcional, como
+expressões lambdas ou referências de método

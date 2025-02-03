@@ -1,0 +1,30 @@
+Intermediárias (não finalizam o Stream, retornam outro Stream)
+
+ - filter(Predicate) -> Filtra elementos
+ - map (Function) -> Transforma elementos
+ - flatMap(Function) -> Achata coleções aninhadas
+ - distinct() -> Remove duplicatas - com base no equals()
+ - sorted() -> Ordena elementos
+ - peek(Consumer) -> Permite depuração (inspecionar elementos sem alteração)
+ - limit(long) -> Restringe tamanho
+ - skip(long) -> Pula elementos iniciais
+
+
+Terminais (finalizam o Stream, retornam um valor ou coleção)
+
+ - collect(Collector) -> coleta os elementos numa collection ou realiza operações de redução (com base no Collector)
+ - forEach(Consumer) -> Itera sobre os elementos
+ - reduce(BinaryOperator) -> Agrega valores
+ - count() -> conta elementos
+ - min(Comparator<T>) -> retorna o menor elemento com base no comparator
+ - max(Comparator<T>) -> retorna o maior elemento com base no comparator
+
+    short-circuit
+ - anyMatch(Predicate) -> retorna true se algum corresponder
+ - allMatch(Predicate) -> retorna true se todos corresponder
+ - noneMatch(Predicate) -> retorna true se nenhum corresponder
+ - findFirst() -> retorna o primeiro
+ - findAny() -> retorna qualquer um
+
+ - toArray() -> converte para array
+ - toList() -> converte para list
