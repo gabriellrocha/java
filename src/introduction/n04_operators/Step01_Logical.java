@@ -1,12 +1,13 @@
-package introduction;
+package introduction.n04_operators;
 
 @SuppressWarnings("all")
-public class Step14_OperadoresLogicos {
+public class Step01_Logical {
 
     public static void main(String[] args) {
 
-        // Usados para combinar ou negar expressões booleanas
-        // Expressão booleana tem como retorno um valor booleano (true ou false)
+        // Usados para COMBINAR ou NEGAR expressões booleanas
+        // Expressões booleana -> return true or false
+
 
         // NOT (!) - operador unário que inverte o valor booleano
 

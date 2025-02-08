@@ -1,4 +1,4 @@
-package introduction;
+package introduction.n01_basic;
 
 public class Step1_Comentarios {
 

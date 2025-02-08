@@ -1,6 +1,6 @@
-package introduction;
+package introduction.n02_datatypes.primitive;
 
-public class Step13_Booleans {
+public class Step02_Boolean {
 
     public static void main(String[] args) {
 

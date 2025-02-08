@@ -68,3 +68,10 @@ Refere-se ao grau que os elementos de uma classe (ou modulo) estão relacionados
 ## Acomplamento
 É o grau de dependência entre diferentes módulos ou classes de um sistema
 - Com baixo acoplamento um componente consegue operar de forma praticamente independente do outro
+
+## Framework Java
+
+Fornece uma estrutura pronta de classes e interfaces para construir aplicativos de forma eficiente. Simplifica a 
+adição de novos recurso ao oferecer componentes reutilizáveis que realizam tarefas semelhantes, eliminando a 
+necessidade de criar tudo do zero a cada novo projeto. Dentre outras vantagens temos: reusabilidade, qualidade,
+velocidade, manutenção e principalmente reduzir o esforço para projetar novas APIs

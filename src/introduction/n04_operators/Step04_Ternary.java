@@ -1,12 +1,11 @@
-package introduction;
+package introduction.n04_operators;
 
 @SuppressWarnings("all")
-public class Step16_OperadorTernario {
+public class Step04_Ternary {
 
     public static void main(String[] args) {
 
-
-        // É uma maneira concisa de expressar condicionais simples
+        // Forma consisa de usar uma estrutura condicional
         // Possibilita atribuir valores diferentes a uma variável dependendo da condição
         // Consiste em três operandos
 

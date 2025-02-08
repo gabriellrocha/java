@@ -1,4 +1,4 @@
-package introduction;
+package introduction.n01_basic;
 
 public class Step3_Imprimir {
 
@@ -8,7 +8,6 @@ public class Step3_Imprimir {
         System.out.print("Imprimir na saída padrão");
 
         // Caractere de escape, representa um símbolo especial que não tem símbolo correspondente no teclado
-
         System.out.print("\nRepresento uma quebra de linha\n");
 
         // Concatenar String ou outros literais
@@ -18,7 +17,7 @@ public class Step3_Imprimir {
         System.out.println("Meu nome é " + nome);
 
         int idade = 25;
-        // Nesta caso o valor "idade" será convertido em String e convertido ao valor à esquerda
+        // "idade" será convertido em String
         System.out.println("Tenho " + 25 + " anos");
 
     }
