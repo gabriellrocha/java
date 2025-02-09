@@ -13,13 +13,10 @@ Streams diferem das coleções de várias maneiras:
     elementos de uma fonte como uma estrutura de dados, um array, uma função geradora, um canal E/S, por meio de um
     pipeline de operações computacionais.
 
-    - Uma operação em uma stream produz um resultado, mas não modifica a sua origem. Por exemplo,
-     filtrar um Stream obtido de uma coleção produz um novo Stream sem os elementos filtrados,
-     em vez de remover elementos da coleção de origem.
+    - Uma operação em uma stream produz um resultado, mas não modifica a sua origem.
 
-    - As operações de Stream são divididas em operações intermediarias (produtoras de stream) e operações
-    terminais (produtoras de valor ou efeito colateral). Operações intermediarias são sempre preguiçosas (Lazy - Só são
-    executadas quando uma operação terminal é chamada)
+    - As operações de Stream são divididas em operações intermediarias(produtoras de stream) e operações
+    terminais(produtoras de valor ou efeito colateral)
 
 
 Streams podem ser obtidos de várias maneiras. Alguns exemplos incluem:
