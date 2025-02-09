@@ -2,7 +2,7 @@ package java8.optional;
 
 import java.util.Optional;
 
-public class Step01_OptionalDemo {
+public class Step01_Optional {
 
     // Classe que encapsula um valor que pode ou não estar presente
 

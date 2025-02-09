@@ -1,4 +1,4 @@
-package java8.lambdas.generalpurpose;
+package java8.lambdas.apidefault;
 
 import java.util.function.UnaryOperator;
 
