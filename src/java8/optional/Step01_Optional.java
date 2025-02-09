@@ -4,10 +4,10 @@ import java.util.Optional;
 
 public class Step01_Optional {
 
-    // Classe que encapsula um valor que pode ou não estar presente
+    // Optional é um container que pode ou não conter um valor
+    // Evita o uso de valores nulos
+    // Incentiva o tratamento explícito de valores ausente
 
-    /* Motivação - Evitar o uso de valores nulos, reduzir os riscos de NullPointerException
-        e incentivar o tratamento explícito de valores ausentes*/
 
     public static void main(String[] args) {
 
