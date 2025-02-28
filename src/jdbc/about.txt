@@ -1,0 +1,21 @@
+JDBC - API padrão do Java para conectar, executar consultas e processar
+os resultados com banco de dados relacioal.
+
+A JDBC define a especificação de como deve ser feita a comunicação entre
+a aplicação e o banco de dados. Para que essa comunicação aconteça, são
+utilizados drivers JDBC, que são implementações específicas fornecidas
+pelos fabricantes dos bancos de dados
+
+
+Ciclo de uma transação
+
+Sessão da conexão: Uma vez que a conexão é estabelecida com o BD, ele cria uma "sessão" ou contexto,
+que mantém informações sobre a transação em andamento.
+
+Operações pendentes: Durante a transação, qualquer operação de modificação é mantida em memória, ou seja,
+pendente até que o commit seja chamado.
+
+Commit: Quando executado, todas as alterações feitas na transação são persistidas de forma permanente
+e ficam visíveis para outras conexões
+
+Rollback: Se a transação falhar ou precisar ser revertida, o rollback desfaz as operações pendentes
