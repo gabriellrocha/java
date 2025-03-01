@@ -1,18 +1,21 @@
-package java8.stream;
+package java8.streams.operations.intermediate;
 
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class Step08_Distinct {
+public class Step04_Distinct {
 
     public static void main(String[] args) {
 
+        Stream<String> stream = Stream.of("Gabriel", "Maria", "Gabriel", "Maria");
 
-        // Remove duplicatas com base no equals()
+        /* Retorna um novo Stream contendo apenas elementos únicos, removendo duplicatas
+           com base no equals(). Mantém a ordem original dos elementos.
+        */
 
-        Stream.of(new User("Gabriel"), new User("Maria"), new User("Gabriel"))
-                .distinct()
+        stream.distinct()
                 .forEach(System.out::println);
+
     }
 }
 

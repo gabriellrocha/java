@@ -1,8 +1,8 @@
-package java8.stream;
+package java8.streams.parallel;
 
 import java.util.stream.LongStream;
 
-public class Step15_ParallelStream {
+public class Step01_ParallelStream {
 
     public static void main(String[] args) {
 
@@ -11,8 +11,6 @@ public class Step15_ParallelStream {
 
         // Sem processamento paralelo
         withoutParallelProcessing();
-
-
 
     }
 

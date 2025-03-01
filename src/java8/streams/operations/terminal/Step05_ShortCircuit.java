@@ -1,14 +1,14 @@
-package java8.stream;
+package java8.streams.operations.terminal;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-public class Step04_ShortCircuit {
+public class Step05_ShortCircuit {
 
     public static void main(String[] args) {
 
-        // Operações Short-circuit - Para a execução do Stream assim que o resultado for determinado
+        // Short-circuit - Para a execução do Stream assim que o resultado for determinado
         // match = corresponder
 
         List<Double> notas = List.of(7.5, 8.3, 8.1, 9.0, 6.8, 9.8, 7.4, 5.6);
@@ -38,7 +38,6 @@ public class Step04_ShortCircuit {
         Optional<Double> Parallel = notas.parallelStream() // com parallelStream(), pode ser mais rápido
                 .filter(aprovado)                           // pega o primeiro sem seguir ordem
                 .findAny();
-
     }
 }
 

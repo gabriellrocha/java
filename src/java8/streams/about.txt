@@ -1,0 +1,72 @@
+# Streams
+
+Stream, IntStream, LongStream, DoubleStream são 'fluxos' sobre objetos e tipos primitivos int, long, double
+
+O principal objetivo da API de Stream é permitir a manipulação de elementos de forma declarativa e
+funcional, simplificando o código e melhorando a legibilidade. Elimina a necessidade de loops imperativos,
+e facilita a execução de operações em paralelo, quando necessário.
+
+A maioria das operações de Stream aceitam parâmetros que definem o comportamento desejado, e esses parâmetros
+são expressões lambdas(lambda expressions) ou referências de método (Method References). Essas expressões são passadas
+como instâncias de interfaces funcionais.
+
+
+Streams diferem das coleções de várias maneiras:
+
+- Transmitem elementos sem armazená-los, vindos de fontes como coleções ou funções geradoras
+- Uma operação em um Stream produz um resultado, mas não modifica sua fonte
+- As operações são divididas em dois tipos:
+
+    - Intermediárias: Operações que retornam um novo Stream e são avaliadas de forma preguiçosa(lazy),
+      ou seja, são executadas quando uma operações terminal é invocada
+
+    - Terminais: Operações que consomem o Stream e produzem um resultado ou efeito
+      colateral(como imprimir). Finalizam o fluxo.
+
+
+Streams podem ser obtidos das seguintes fontes:
+
+    - De uma Collection por meio dos métodos stream() e parallelStream()
+    - Arrays
+    - Função geradora (como Stream.generate()) - Sem depender de uma fonte de dados existente
+    - Métodos de fábrica, como Stream.of(), IntStream.range()
+
+
+
+Pipeline - É o nome dado a uma sequência de operações encadeadas que processam os elementos de um Stream. Composta por:
+
+     - Fonte, ZERO ou MAIS operações intermediárias e UMA operações terminal
+
+
+Short-circuit - Refere-se à técnica de 'parar a execução de um Stream assim que o resultado for determinado', sem
+processar os elementos restantes. Isso melhor o desempenho ao evitar operações desnecessárias.
+
+
+Paralelismo
+
+Todas as operações de Stream podem ser executadas em pararelo. As implementações de Stream
+no JDK criam streams sequenciais, a menos que o paralelismo seja solicitado explicitamente.
+
+Porém, não é sempre garantido que Streams Paralelos será mais rápido - depende do tipo de tarefa e
+da quantidade dos dados.
+
+A API de Stream utiliza o ForkJoinPool p/ gerenciar as threads e distribuir as tarefas.
+
+ForkJoinPool utiliza o conceito de roubo de tarefas. Quando uma thread no pool termina suas tarefas,
+ela pode "roubar" tarefas de outras threads que ainda estão trabalhando. Isso ajuda a evitar
+threads ociosas e otimiza o uso dos recursos do sistema.
+
+Em outros tipos de pools(como o ThreadPoolExecutor), cada thread é atribuida a uma tarefa
+específica e executa até o fim, sem "roubar" tarefas de outras threads.
+
+Warning: Operações que exigem sincronização entre as threads podem ser mais custosas e não
+compensar o paralelismo. E.g. distinct() - Requer uma estrutura de dados compartilhada p/
+garantir que os elementos sejam distintos, o que pode exigir sincronização
+
+
+Quando não usar/cuidados
+
+ - Se a operação alterar o estado do objeto, pois pode gerar problemas de concorrência
+ - Para conjunto de dados pequenos, o custo de gerenciar múltiplas threads pode superar o
+   ganho de performace
+ - Quando a ordem de processamento dos elementos for crucial

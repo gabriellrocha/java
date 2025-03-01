@@ -1,9 +1,8 @@
-package java8.stream;
+package java8.streams.parallel;
 
 import java.util.List;
-import java.util.concurrent.ForkJoinPool;
 
-public class Step16_ForkJoinPool {
+public class Step02_ForkJoinPool {
 
     public static void main(String[] args) {
 
@@ -14,9 +13,7 @@ public class Step16_ForkJoinPool {
 //   (Join) O trabalho (resultado) é combinado de volta
 
 
-        // thread pool personalizado
-
-        ForkJoinPool customThreadPool = new ForkJoinPool(6); // limit 6 threads
+        java.util.concurrent.ForkJoinPool customThreadPool = new java.util.concurrent.ForkJoinPool(4); // limit 6 threads
 
 
         List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
