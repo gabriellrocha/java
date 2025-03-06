@@ -3,18 +3,22 @@ package introduction.n07_strings;
 @SuppressWarnings("All")
 public class Step01_String {
 
+    /* Strings - São uma sequências de caracteres, como palavras ou frases, usadas para representar texto
+
+       - É imutável uma vez criada: Operações com String gera uma nova String
+       - Strings literais são armazendas no pool de strings
+       - Pool de Strings(área dentro do heap): Conjunto de Strings armazenadas para reutilização
+       - Concatenar Strings significa anexar uma String a outra
+    */
+
     public static void main(String[] args) {
 
-        // Usado para representar palavras
-        // É imutável (operações com String gera uma nova String)
+        String language = new String("Java");      // Ineficiente
 
-        String name = new String("Gabriel");      // armazenado no Heap - ineficiente
-        String namee = "Gabriel";                        // armazenado no String Pool
-
-        // String Pool é uma área da memória(dentro do Heap) onde são armazendas as Strings literais
-
-        // Concatenação em String não é uma operação comutativa
+        String framework = "Spring";                      // Armazenado no String Pool
+        String framework2= "Spring";
 
 
+        boolean result = framework == framework2;         // true - compara as referências, não o conteúdo
     }
 }

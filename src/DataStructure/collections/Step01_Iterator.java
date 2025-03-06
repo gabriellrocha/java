@@ -1,4 +1,4 @@
-package java8.stream;
+package data_structure.collections;
 
 import java.util.*;
 
