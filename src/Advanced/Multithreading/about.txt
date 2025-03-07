@@ -1,0 +1,5 @@
+Computação assíncrona: Modelo de execução onde operações não precisam
+ser concluídas antes que outras sejam iniciadas.
+
+Computação síncrona: Modelo onde as operações são executadas de forma sequencial
+e bloqueante, ou seja, cada tarefa deve ser concluída antes que a próxima comece.

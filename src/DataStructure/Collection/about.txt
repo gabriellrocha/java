@@ -1,0 +1,12 @@
+Collection (Interface raiz da hierarquia de coleções)
+
+- É uma estrutura de dados. Representa um grupo de objetos, conhecidos como seus elementos.
+
+- O JDK fornece implementações de sub interfaces mais específicas como List, Set, Queue.
+
+- Todas as classes de implementação (implementam Collection indiretamente por meio de uma
+  de suas subinterfaces) fornecem dois construtores "padrão":
+
+    - Construtor void(sem argumento), que cria uma coleção vazia,
+    - Construtor com um único argumento do tipo Collection, que cria uma coleção com os
+      mesmos elementos que seu argumento

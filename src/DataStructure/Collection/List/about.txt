@@ -1,0 +1,38 @@
+O que é?
+- List é uma interface que representa uma sequencia ordenada de elementos, permitindo duplicatas
+
+Além dos métodos herdados de Collection, List fornece métodos para manipular elementos por meio
+de seus índices
+
+
+# Principais implementações:
+
+ArrayList - Lista baseada em um arrays dinâmico, que é redimensionada automáticamente conforme
+os elementos são adicionados/removidos
+
+Quando usar?
+ - Acesso rápido por índice(leitura rápida), e operações de inserção/remoção são feitas principalmente
+no FINAL da lista
+
+-------
+
+LinkedList - Lista baseada em nós encadeados(duplamente encadeada), onde cada nó contém
+referências ao próximo e ao anterior
+
+Quando usar?
+ - Quando as operações de inserção/remoção forém frequentes no ínicio/meio da lista
+
+-------
+
+Vector - Similar ao ArrayList, mas sicronizado. Útil em ambientes multithreaded, onde precisa
+de sincronização nas operações
+
+Quando usar?
+ - Quando precisar de uma lista dinâmica e for necessário controle de concorrência, caso contrário
+  ArrayList é mais eficiente, pois as coleções não sincronizadas fornecem melhor desempenho que as sincronizadas
+
+
+# Outras soluções para concorrência
+
+A API java.util.concurrent fornece 'empacotadores de sincronização' que podem ser usados para adicionar
+sincronização as coleções não sincronizadas

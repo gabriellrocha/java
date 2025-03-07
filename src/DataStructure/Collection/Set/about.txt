@@ -1,0 +1,17 @@
+O que é?
+
+- Set é uma interface que representa uma coleção de elementos únicos, ou seja, não permite duplicatas
+e sem ordem definida
+
+Quando usar?
+- Precisa garantir que não haja elementos duplicados na coleção
+
+
+
+# Principais implementações:
+
+HashSet -
+
+LinkedHashSet -
+
+TreeSet -
